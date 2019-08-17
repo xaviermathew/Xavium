@@ -19,13 +19,6 @@ class Op(BaseOp):
     def get_cost(self):
         return 1
 
-    @classmethod
-    def from_args(cls, fn, *args):
-        result = []
-        for arg in args:
-            result.append(cls(fn, arg))
-        return result
-
     def execute(self):
         return self.fn(*self.args)
 
