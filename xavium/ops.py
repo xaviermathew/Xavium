@@ -16,9 +16,6 @@ class Op(BaseOp):
         self.fn = fn
         self.args = args
 
-    def get_cost(self):
-        return 1
-
     def execute(self):
         return self.fn(*self.args)
 
